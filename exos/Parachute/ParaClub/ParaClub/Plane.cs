@@ -17,6 +17,14 @@ namespace ParaClub
             @"  \_______ --------- __>-} ",
             @"        \_____|_____/   |  "
         };
+        private int PlaneX;
+        public Plane()
+        {
+         
+        }
+        public void MoveRight()
+        {
 
+        }
     }
 }
