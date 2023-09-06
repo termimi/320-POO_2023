@@ -21,18 +21,15 @@
         public void show()
         {
 
-            foreach (string c in view)
+            for(int i = 0; i < view.Length; i++)
             {
-                Console.SetCursorPosition(PlaneX, PlaneY);
-                this.PlaneY++;
-                Console.WriteLine(c);
+                Console.SetCursorPosition(PlaneX, PlaneY +i);
+                Console.WriteLine(view[i]);
             }
         }
         public void MoveRight()
         {
-            Console.SetCursorPosition(PlaneX + 1, PlaneY);
             PlaneX++;
-            PlaneY = 0;
             if(PlaneX == Console.WindowWidth - 1)
             {
                 PlaneX = 0;
