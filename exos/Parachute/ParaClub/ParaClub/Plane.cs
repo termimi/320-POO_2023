@@ -24,7 +24,7 @@
             foreach (string c in view)
             {
                 Console.SetCursorPosition(PlaneX, PlaneY);
-                PlaneY++;
+                this.PlaneY++;
                 Console.WriteLine(c);
             }
         }
@@ -33,7 +33,11 @@
             Console.SetCursorPosition(PlaneX + 1, PlaneY);
             PlaneX++;
             PlaneY = 0;
-            Thread.Sleep(500);
+            if(PlaneX == Console.WindowWidth - 1)
+            {
+                PlaneX = 0;
+                PlaneY = 0;
+            }
         }
     }
 }
