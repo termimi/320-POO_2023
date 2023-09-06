@@ -13,5 +13,8 @@ while (true)
      // Temporiser
     Thread.Sleep(50);
 }
+List<Para> parachutiste = new List<Para>();
+Para Bob = new Para();
+parachutiste.Add(Bob);
 
 
