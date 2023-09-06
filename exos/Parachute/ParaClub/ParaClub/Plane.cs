@@ -20,7 +20,7 @@
         }
         public void show()
         {
-            
+
             foreach (string c in view)
             {
                 Console.SetCursorPosition(PlaneX, PlaneY);
@@ -30,15 +30,10 @@
         }
         public void MoveRight()
         {
-            for (int i = 0; i < Console.WindowWidth; i++)
-            {
-                Console.Clear();
-                Console.SetCursorPosition(PlaneX + 1, PlaneY);
-                show();
-                PlaneX++;
-                PlaneY =0;
-                Thread.Sleep(500);
-            }
+            Console.SetCursorPosition(PlaneX + 1, PlaneY);
+            PlaneX++;
+            PlaneY = 0;
+            Thread.Sleep(500);
         }
     }
 }
