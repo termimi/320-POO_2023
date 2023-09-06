@@ -18,9 +18,18 @@ namespace ParaClub
             @"        \_____|_____/   |  "
         };
         private int PlaneX;
+        private int PlaneY;
         public Plane()
         {
-         
+         PlaneX = 0;
+         PlaneY = 0;
+        }
+        public void show()
+        {
+         foreach (string c in view)
+         {
+          Console.WriteLine(c);
+         }
         }
         public void MoveRight()
         {
