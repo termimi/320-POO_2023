@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace ParaClub
 {
-    internal class Class1
+    internal class Plane
     {
+        private string[] view =
+        {
+            @" _                         ",
+            @"| \                        ",
+            @"|  \       ______          ",
+            @"--- \_____/  |_|_\____  |  ",
+            @"  \_______ --------- __>-} ",
+            @"        \_____|_____/   |  "
+        };
+
     }
 }
