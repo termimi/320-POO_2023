@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ParaClub
+﻿namespace ParaClub
 {
     internal class Plane
     {
@@ -19,21 +13,32 @@ namespace ParaClub
         };
         private int PlaneX;
         private int PlaneY;
-        public Plane()
+        public Plane(int PlaneX, int PlaneY)
         {
-         PlaneX = 0;
-         PlaneY = 0;
+            this.PlaneX = PlaneX;
+            this.PlaneY = PlaneY;
         }
         public void show()
         {
-         foreach (string c in view)
-         {
-          Console.WriteLine(c);
-         }
+            
+            foreach (string c in view)
+            {
+                Console.SetCursorPosition(PlaneX, PlaneY);
+                PlaneY++;
+                Console.WriteLine(c);
+            }
         }
         public void MoveRight()
         {
-
+            for (int i = 0; i < Console.WindowWidth; i++)
+            {
+                Console.Clear();
+                Console.SetCursorPosition(PlaneX + 1, PlaneY);
+                show();
+                PlaneX++;
+                PlaneY =0;
+                Thread.Sleep(500);
+            }
         }
     }
 }
